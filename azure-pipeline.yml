@@ -1,0 +1,54 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pool:
+  vmImage: 'windows-2019'
+
+variables:
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'debug'
+  environment: $(buildConfiguration)
+
+# https://github.com/diginex/gwallet/commit/632fb95a2996679cac8cddda017befddb3a3f2f8
+
+steps:
+
+- task: CmdLine@2
+  inputs:
+    script: 'dir'
+# - task: Npm@1
+#   displayName: Restore FSharp Project
+#   inputs:
+#     command: 'custom'
+#     customCommand: 'run restore'
+
+# - task: DotNetCoreCLI@2
+#   displayName: Restore
+#   inputs:
+#     command: restore
+
+# - task: DotNetCoreCLI@2
+#   displayName: Build
+#   inputs:
+#     arguments: '--configuration $(buildConfiguration)'
+
+# - task: DotNetCoreCLI@2
+#   displayName: Publish LOSfsharp
+#   inputs:
+#     command: publish
+#     publishWebProjects: false
+#     # workingDirectory: ''
+#     arguments: '--configuration $(buildConfiguration) --output $(build.artifactstagingdirectory)'
+#     zipAfterPublish: True
+
+# - task: PublishBuildArtifacts@1
+#   displayName: 'Publish Artifact'
+#   inputs:
+#     PathtoPublish: '$(build.artifactstagingdirectory)'
+
+
+
+
