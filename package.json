@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "azure-functions-core-tools": "3",
+    "global": "^4.4.0"
+  },
+  "scripts": {
+    "start": "npx func start"
+  }
+}
