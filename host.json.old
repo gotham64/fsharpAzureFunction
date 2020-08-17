@@ -1,0 +1,11 @@
+{
+    "version": "2.0",
+    "logging": {
+        "applicationInsights": {
+            "LOSExcludedTypes": "Request",
+            "LOSSettings": {
+                "isEnabled": true
+            }
+        }
+    }
+}
